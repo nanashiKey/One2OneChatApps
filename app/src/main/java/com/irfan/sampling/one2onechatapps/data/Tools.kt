@@ -14,29 +14,18 @@ import java.util.*
  *   email : assidiq.irfan@gmail.com
  **/
 class Tools {
-
-    private fun getAPIVerison(): Float {
-
-        var f: Float? = null
-        try {
-            f = java.lang.Float.valueOf(Build.VERSION.RELEASE.substring(0, 2))
-        } catch (e: NumberFormatException) {
-        }
-
-        return f!!.toFloat()
-    }
-
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    fun systemBarLolipop(act: Activity) {
-        if (getAPIVerison() >= 5.0) {
-            val window = act.window
-            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
-            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
-            window.statusBarColor = act.resources.getColor(R.color.colorPrimaryDark)
-        }
-    }
-
     companion object {
+        private fun getAPIVerison(): Float {
+
+            var f: Float? = null
+            try {
+                f = java.lang.Float.valueOf(Build.VERSION.RELEASE.substring(0, 2))
+            } catch (e: NumberFormatException) {
+            }
+
+            return f!!.toFloat()
+        }
+
         fun formatTime(time: Long): String {
             // income time
             val date = Calendar.getInstance()
@@ -57,6 +46,15 @@ class Tools {
                 dateFormat = SimpleDateFormat("MMM yyyy", Locale.US)
             }
             return dateFormat.format(time)
+        }
+        @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+        fun systemBarLolipop(act: Activity) {
+            if (getAPIVerison() >= 5.0) {
+                val window = act.window
+                window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+                window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+                window.statusBarColor = act.resources.getColor(R.color.colorPrimaryDark)
+            }
         }
     }
 
