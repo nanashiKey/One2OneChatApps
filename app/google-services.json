@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "162127921218",
+    "firebase_url": "https://one2onechatapps.firebaseio.com",
+    "project_id": "one2onechatapps",
+    "storage_bucket": "one2onechatapps.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:162127921218:android:79b79582746ca4c0",
+        "android_client_info": {
+          "package_name": "com.irfan.sampling.one2onechatapps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "162127921218-f0segt5cr13udrp3una2pglmpkevk63p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.irfan.sampling.one2onechatapps",
+            "certificate_hash": "d443b0d86ef4d7e9fb76effd9c1afaa2a0b8e5b9"
+          }
+        },
+        {
+          "client_id": "162127921218-rb47vb80fn4245du9ijphhf88rib91m4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbn5EL4ylWrAReabwzTVXKfVdivNYXV6A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "162127921218-rb47vb80fn4245du9ijphhf88rib91m4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
